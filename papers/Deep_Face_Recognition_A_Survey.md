@@ -52,7 +52,30 @@ feature-based(특징점 기반) 얼굴인식의 마일스톤은 그림.1에 잘 
 >encoding codebook은 [다크프로그래머 - Bag of Words 기법](https://darkpgmr.tistory.com/125)을 참고<br>
 >참고로 다크프로그래머님의 블로그를 모른다면, 영상처리를 공부한 적이 없는 것이나 마찬가지.
 
+얼굴 인식 문제를 해결하기 위해서 시도되었던 예전의 방법들은 일반적으로 한개 혹은 두개의 layer representation을 사용하였습니다. 예를들어,  filtering responses나 hostogram of the feature codes가 그러한 것들입니다. 연구자들은 preprocessing, local descriptors, 그리고 feature transformation을 개별적으로 향상시켜 얼굴인식의 정확도를 천천히 끌어올렸습니다. 계속적으로 발전해왔지만, 이러한 "shallow" methods는 LFW 벤치마크 성능을 95%까지밖에 향상시키지 못했습니다. 그래서 이러한 결과는 "shallow" methods가 안정적인 identity feature를 추줄하기에 불충분하다는 것을 나타냅니다. 그런데, **2012년**에 모든 것이 변했습니다. AlexNet이 ImageNet에서 우승을하며, 딥러닝이라는 methods가 존재감을 나타냅니다. 딥러닝은 feature extraction and transformation을 위해 cascade of multiple layers of processing units를 사용합니다. 딥러닝은 다른 수준의 추상(abstraction)에 대응하는 multple levels of representations를 학습합니다. 이러한 개념의 계층구조로부터 오는 levels는 얼굴 pose, 조명, 감정 변화에 강한 불변성을 띕니다. (아래의 그림 참고)
+
 ![Alt text](/images/img_0_2.png)
+
+위 그림에서 보았을 때, 깊은 인공신경망에서 왼쪽에서부터 가장 첫 레이어는 Gabor feature와 비슷하게 나타납니다. 이전에 과학자들이 수년에 걸친 실험을 통해 찾아낸 것이었죠. 두번째 레이어는 좀 더 복잡한 texture features를 학습합니다. 세번째 레이어의 features는 더 복잡하고, 구조로서는 좀 단순한 구조들이 나타나기 시작합니다. 예를들어 high-bridged nose나 big eyes 같이요. 마지막 네번째 레이어에서는, 신경망의 출력이 특정한 얼굴의 속성을 충분히 나타내고 있습니다. 예를들어, 웃음, 소리 짖음, 심지어 파란 눈까지도요. 
+
+**2014년에** DeepFace가 LFW 벤치마크의 state-of-the-art 정확도를 달성합니다. human performance에 접근하는 정도로 말이죠. `DeepFace: 97.35% vs. Human:97.53%` 이때 이후로, 얼굴 인식분야의 연구는 딥러닝 기반의 접근방법으로 모두 옮겨집니다. 그리고 그 정확도는 99.70%까지 드라마틱하게 올라갑니다. 단지 3년만에요. 딥러닝 기술은 얼굴 인식 연구분야를 완전히 뒤바꿔놉니다. 알고리즘, 데이터셋, 심지어 평가 프로토콜까도요.
+
+### 논문에서 말하는 이 논문의 주요 contributions
+    1. 딥러닝을 이용한 얼굴인식에 대한 네트워크 아키텍처 및 손실 함수들의 발전에 대한 체계적인(분류법의) 리뷰
+        - 다양한 손실 함수들을 유클리드거리 기반 손실, 코사인 마진 기반 손실, 소프트 맥스 손실 및 그 변형에 대해 연구
+        - Deepface, DeepID 시리즈, VGGFace, FaceNet, VGGFafce 2, 그리고 다른 주류 네트워크 아키텍처
+    2. 포즈 변화에 따른 인식 난이도를 다루는 것과 같이 우리는 얼굴 처리 방법을 "one-to-many augmentation"과 "many-to-one normalization"의 두 클래스로 분류하고, 어떻게 GAN이 연구 분야를 촉진하는 지를 논의합니다.
+    3. 얼굴인식에 매우 중요한 활용 가능한 공공의 대규모 학습 데이터셋에 대한 비교 및 분석
+        - LFW, IJB-A/B/C, Megaface, MS-Celeb-1M
+        - 위 데이터셋들은 4가지 측면에서 리뷰하고 비교되었습니다.
+            1. 학습 방법론
+            2. 평가 작업
+            3. 측정 항목
+            4. 인식 장면
+    4. 일반적인 작업 외의 12개의 challenging 얼굴인식 scenes
+        - ex) antispoofing, cross-pose 얼굴 인식, cross-age 얼굴 인식
+        - 이러한 미해결 문제에 대해 특별히 고안된 방법을 검토함으로써 향후 얼굴인식에 대한 연구에서 중ㅇ요한 issue들을 밝힙니다.
+
 
 ___
 몰랏던 표현들
