@@ -28,7 +28,7 @@
 >~~대학원 입학했을 때, PCA와 함께 열심히 과제로 고생하던 기억이...~~<br/>
 feature-based(특징점 기반) 얼굴인식의 마일스톤은 그림.1에 잘 표현되어있습니다.
 
-![Alt text](/images/img_0_0.PNG)
+[![](/images/img_0_0.PNG)](#)
 
 >~~그림이 작아서 잘 안보일 수도 있으니 주의. 반 자르려 했으나 자료가 수평적인 연결성이 있어서....(핑계)~~<br/>
 성능평가는 LFW dataset을 기준으로 Egienface(60%), Gabor/LBP(70%), LE(82%), 그리고 Deepface(97%) 순으로 성능이 향상되는 것을 보여줍니다.
@@ -37,7 +37,7 @@ feature-based(특징점 기반) 얼굴인식의 마일스톤은 그림.1에 잘 
 **1990년대와 2000년대 사이** 총체주의적 접근방법(<u>holistic approaches</u>)은 특정한 분포 가정을 통한 low-dimensional 표현을 이끌어냈습니다. 여기서 low-dimensional 표현은 linear subspace나 manifold, 그리고 sparse representation과 같은 것을 말합니다.
 >1. linear subspace[13][118][44]는 [성윤님의 블로그](https://hwauni.tistory.com/entry/Linear-subspaces)를 참고<br>
 >2. manifold[70][199][43]: 다양체 학습 <br>
->> ![Alt text](/images/img_0_1.png) <br>
+>> [![](/images/img_0_1.PNG)](#) <br>
 >>똑같지만 독특한 얼굴들의 다양성을 나타내는 사진입니다. 얼굴은 무작위로 manifold로 샘플링됩니다. 매개변수 벡터를 선형으로 스케일링(늘리고/줄이고)하면, distinctiveness(고유성/차별성)는 달라지지만, ID(그 사람이 누구인지)는 여전히 고정됩니다. 샘플을 manifold상에서 이동시키면 distinctiveness가 고정된 상태에서 ID가 달라집니다.<br>
 >>ref: [Manifold-based constraints for operations in face space](https://www.semanticscholar.org/paper/Manifold-based-constraints-for-operations-in-face-Patel-Smith/531ed96d7eb85397123e9ab96e0866a986a96ff5)<br>
 >>about distintiveness: [What's distinctive about a distinctive face?](https://www.ncbi.nlm.nih.gov/pubmed/8177958)<br>
@@ -54,7 +54,7 @@ feature-based(특징점 기반) 얼굴인식의 마일스톤은 그림.1에 잘 
 
 얼굴 인식 문제를 해결하기 위해서 시도되었던 예전의 방법들은 일반적으로 한개 혹은 두개의 layer representation을 사용하였습니다. 예를들어,  filtering responses나 hostogram of the feature codes가 그러한 것들입니다. 연구자들은 preprocessing, local descriptors, 그리고 feature transformation을 개별적으로 향상시켜 얼굴인식의 정확도를 천천히 끌어올렸습니다. 계속적으로 발전해왔지만, 이러한 "shallow" methods는 LFW 벤치마크 성능을 95%까지밖에 향상시키지 못했습니다. 그래서 이러한 결과는 "shallow" methods가 안정적인 identity feature를 추줄하기에 불충분하다는 것을 나타냅니다. 그런데, **2012년**에 모든 것이 변했습니다. AlexNet이 ImageNet에서 우승을하며, 딥러닝이라는 methods가 존재감을 나타냅니다. 딥러닝은 feature extraction and transformation을 위해 cascade of multiple layers of processing units를 사용합니다. 딥러닝은 다른 수준의 추상(abstraction)에 대응하는 multple levels of representations를 학습합니다. 이러한 개념의 계층구조로부터 오는 levels는 얼굴 pose, 조명, 감정 변화에 강한 불변성을 띕니다. (아래의 그림 참고)
 
-![Alt text](/images/img_0_2.png)
+[![](/images/img_0_2.PNG)](#)
 
 위 그림에서 보았을 때, 깊은 인공신경망에서 왼쪽에서부터 가장 첫 레이어는 Gabor feature와 비슷하게 나타납니다. 이전에 과학자들이 수년에 걸친 실험을 통해 찾아낸 것이었죠. 두번째 레이어는 좀 더 복잡한 texture features를 학습합니다. 세번째 레이어의 features는 더 복잡하고, 구조로서는 좀 단순한 구조들이 나타나기 시작합니다. 예를들어 high-bridged nose나 big eyes 같이요. 마지막 네번째 레이어에서는, 신경망의 출력이 특정한 얼굴의 속성을 충분히 나타내고 있습니다. 예를들어, 웃음, 소리 짖음, 심지어 파란 눈까지도요. 
 
@@ -87,7 +87,7 @@ feature-based(특징점 기반) 얼굴인식의 마일스톤은 그림.1에 잘 
 ### A. Background Concepts and Terminology
 #### [130]에서 언급된 대로, 얼굴인식의 전체 시스템에 필요한 모듈은 아래 그림과 같이 3개가 있습니다.
 
-![Alt text](/images/img_0_3.png)
+[![](/images/img_0_3.PNG)](#)
 
 1. Face Detection (includes Localization)
 먼저 face detector를 사용하여 이미지 혹은 비디오의 얼굴을 localize합니다.
@@ -95,7 +95,7 @@ feature-based(특징점 기반) 얼굴인식의 마일스톤은 그림.1에 잘 
 2. Facial Landmark Detection & Align
 얼굴의 랜드마크(눈, 코, 입과 같은 것)을 검출하고, 정규화된(normalized) 표준 좌표로 정렬합니다.
 > Facial Landmark: 입, 오른쪽 눈썹, 왼쪽 눈썹, 오른쪽 눈, 왼쪽 눈, 코, 턱이 가장 일반적인 landmark입니다. 하지만 이것을 표현하기 위한 방법은 다양합니다. 일반적으로는 dlib가 제공하는 68개의 점으로 이루어진 landmark를 많이 사용합니다. <br>
-> ![Alt text](/images/img_0_4.png) <br>
+> [![](/images/img_0_0.PNG)](#) <br>
 > Align Face: 얼굴을 정렬하는 방법은 다양한 방법이 존재합니다. 가장 간단하게는 양쪽 눈과, 코, 입의 양 끝을 기준으로 5개의 위치를 지정해두고 모든 얼굴을 그에 맞춥니다. 그러면, 지정된 위치에 그 5개가 존재하기 때문에, 그것을 통해 학습을 하면 비교적 동일한 조건에서 학습 데이터를 가지고 학습을 할 수 있기 때문입니다. 위치적인 align 뿐만 아니라, 값도 normalize 하기 위해 평균 값을 빼거나 하는 방법을 사용하기도 합니다. 정확한 face alignment는 2D의 정보만으로는 어렵지만, 얼굴 인식을 위한 pre-processing으로 사용할 때에는 일반적으로 엄청나게 정교한 과정으로 align하지는 않습니다.
 3. 얼굴 인식 모듈은 이러한 정렬된(aligned) 이미지로 구현됩니다.
 
