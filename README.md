@@ -8,14 +8,13 @@
     - [Inception ResNet v1(CASIA-WebFace)](https://github.com/davidsandberg/facenet)
     - [Inception ResNet v1(VGGFace2)](https://github.com/davidsandberg/facenet)
 Keras
-    - [openFace](http://krasserm.github.io/2018/02/07/deep-face-recognition/)
-    - [openFace](https://github.com/iwantooxxoox/Keras-OpenFace)
+    - [krasserm's openFace](http://krasserm.github.io/2018/02/07/deep-face-recognition/)
+    - [iwantooxxoox' openFace](https://github.com/iwantooxxoox/Keras-OpenFace)
 
 ## Code
 - Keras
-    - [openFace](http://krasserm.github.io/2018/02/07/deep-face-recognition/)
-    - [openFace](https://github.com/iwantooxxoox/Keras-OpenFace)
-    - [openFace](https://github.com/krasserm/face-recognition)
+    - [krasserm's openFace](http://krasserm.github.io/2018/02/07/deep-face-recognition/)
+    - [iwantooxxoox's openFace](https://github.com/iwantooxxoox/Keras-OpenFace)
 
 ## Dataset
 - [InsightFace Git의 Dataset Zoo](https://github.com/deepinsight/insightface/wiki/Dataset-Zoo) - 잘 정리되어있음
