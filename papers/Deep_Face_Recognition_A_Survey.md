@@ -82,6 +82,32 @@ feature-based(특징점 기반) 얼굴인식의 마일스톤은 그림.1에 잘 
 - Section 4: 얼굴을 처리하는 알고리즘과 데이터셋 요약
 - Section 5: 다른 측면에서의 딥러닝을 이용한 몇가지 얼굴인식 방법을 간략하게 소개
 
+
+## 2. Overview
+### A. Background Concepts and Terminology
+#### [130]에서 언급된 대로, 얼굴인식의 전체 시스템에 필요한 모듈은 아래 그림과 같이 3개가 있습니다.
+
+![Alt text](/images/img_0_3.png)
+
+1. Face Detection (includes Localization)
+먼저 face detector를 사용하여 이미지 혹은 비디오의 얼굴을 localize합니다.
+> 여기서의 localize는 어디인지 위치를 찾는 것입니다. 보통 이러한 위치는, 사각형으로 표현되며 시작점(x, y), 끝점(x, y)이나, 시작점(x, y), 크기(w, h)으로 표현됩니다. 픽셀 데이터에 접근할 때에는, 이것은 row인지 col인지, 대응하는 x, y값을 잘 설정하였는지 꼭 확인하여야 합니다. 또한, 이러한 사각 영역을 관심 영역이라고도 부르며, 영어로는 Region Of Interest(ROI)라고 합니다.
+2. Facial Landmark Detection & Align
+얼굴의 랜드마크(눈, 코, 입과 같은 것)을 검출하고, 정규화된(normalized) 표준 좌표로 정렬합니다.
+> Facial Landmark: 입, 오른쪽 눈썹, 왼쪽 눈썹, 오른쪽 눈, 왼쪽 눈, 코, 턱이 가장 일반적인 landmark입니다. 하지만 이것을 표현하기 위한 방법은 다양합니다. 일반적으로는 dlib가 제공하는 68개의 점으로 이루어진 landmark를 많이 사용합니다. <br>
+> ![Alt text](/images/img_0_4.png) <br>
+> Align Face: 얼굴을 정렬하는 방법은 다양한 방법이 존재합니다. 가장 간단하게는 양쪽 눈과, 코, 입의 양 끝을 기준으로 5개의 위치를 지정해두고 모든 얼굴을 그에 맞춥니다. 그러면, 지정된 위치에 그 5개가 존재하기 때문에, 그것을 통해 학습을 하면 비교적 동일한 조건에서 학습 데이터를 가지고 학습을 할 수 있기 때문입니다. 위치적인 align 뿐만 아니라, 값도 normalize 하기 위해 평균 값을 빼거나 하는 방법을 사용하기도 합니다. 정확한 face alignment는 2D의 정보만으로는 어렵지만, 얼굴 인식을 위한 pre-processing으로 사용할 때에는 일반적으로 엄청나게 정교한 과정으로 align하지는 않습니다.
+3. 얼굴 인식 모듈은 이러한 정렬된(aligned) 이미지로 구현됩니다.
+
+#### 얼굴 인식의 분류
+- Face Identification(얼굴 인식): 얼굴 인식은 일대 다 유사성을 계산하여 관찰한 얼굴의 특정 신원을 결정합니다.
+- Face Verification(얼굴 검증): 얼굴 검증(Face Verification)은 갤러리와 관찰한 얼굴 사이의 일대일 유사도를 계산하여, 두 이미지가 같은 대상인지 여부를 확인합니다.
+
+두 시나리오 모두 알려진 subjects 셋은 처음에는 시스템(갤러리)에 등록되고 테스트하는 동안 새로운 subject(probe)가 제공됩니다.
+
+- Closed-set Identification: 관측하는 얼굴이 갤러리에 있는 어떤 id로 나타나는 경우
+- Open-set Identification: 관측하는 얼굴이 갤러리에 없는 사람인 경우
+
 ___
 몰랏던 표현들
 
