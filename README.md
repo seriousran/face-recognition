@@ -3,10 +3,19 @@
 ## 논문 리뷰
 - [Mei Wang and Weihong Deng, "Deep Face Recognition: A Survey," 2018](papers/Deep_Face_Recognition_A_Survey.md)
 
-## Links
-- [딥러닝을 이용한 셀럽 얼굴 인식 by kakao](https://mk.kakaocdn.net/dn/if-kakao/conf2018/deep_face_recognition.pdf)
+## Pre-Trained Model
+- Tensorflow
+    - [Inception ResNet v1(CASIA-WebFace)](https://github.com/davidsandberg/facenet)
+    - [Inception ResNet v1(VGGFace2)](https://github.com/davidsandberg/facenet)
+Keras
+    - [openFace](http://krasserm.github.io/2018/02/07/deep-face-recognition/)
+    - [openFace](https://github.com/iwantooxxoox/Keras-OpenFace)
 
-- 얼굴 인식에 관한 facebook 글(http://fbsight.com/t/topic/148992)
+## Code
+- Keras
+    - [openFace](http://krasserm.github.io/2018/02/07/deep-face-recognition/)
+    - [openFace](https://github.com/iwantooxxoox/Keras-OpenFace)
+    - [openFace](https://github.com/krasserm/face-recognition)
 
 ## Dataset
 - [InsightFace Git의 Dataset Zoo](https://github.com/deepinsight/insightface/wiki/Dataset-Zoo) - 잘 정리되어있음
@@ -14,9 +23,13 @@
 - [The Asian Face Age Dataset (AFAD)](http://afad-dataset.github.io/)
 - [Trillionpairs](http://trillionpairs.deepglint.com/overview)
     - [google drive](https://drive.google.com/drive/folders/1ADcZugpo8Z6o5q1p2tIAibwhsL8DcVwH)
+    
+## Links
+- [딥러닝을 이용한 셀럽 얼굴 인식 by kakao](https://mk.kakaocdn.net/dn/if-kakao/conf2018/deep_face_recognition.pdf)
+- 얼굴 인식에 관한 facebook 글(http://fbsight.com/t/topic/148992)
 
-### Face Recognition 서베이
 
+## Face Recognition 서베이
 
 2014 CVPR에서 대표적인 두 모델(DeepFace, DeepID)이 소개되면서 시작된 얼굴 인식 분야에 대한 최근 5년간의 동향에 대해서 다루고자 합니다.
 
