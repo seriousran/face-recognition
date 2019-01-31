@@ -10,6 +10,7 @@
 Keras
     - [krasserm's openFace](http://krasserm.github.io/2018/02/07/deep-face-recognition/)
     - [iwantooxxoox' openFace](https://github.com/iwantooxxoox/Keras-OpenFace)
+    - [oxford's VGGface](https://github.com/rcmalli/keras-vggface)
 
 ## Code
 - Keras
