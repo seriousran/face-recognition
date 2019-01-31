@@ -1,7 +1,7 @@
 # face-recognition
 
 ## 논문 리뷰
-- [Mei Wang and Weihong Deng, "Deep Face Recognition: A Survey," 2018](papers/Deep_Face_Recognition_A_Survey)
+- [Mei Wang and Weihong Deng, "Deep Face Recognition: A Survey," 2018](papers/Deep_Face_Recognition_A_Survey.md)
 
 ## Links
 - [딥러닝을 이용한 셀럽 얼굴 인식 by kakao](https://mk.kakaocdn.net/dn/if-kakao/conf2018/deep_face_recognition.pdf)
