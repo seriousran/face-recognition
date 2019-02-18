@@ -62,6 +62,12 @@ Keras
     - Training Set: 200M 
     - use only 128 dim feature mapping
     - traiplet을 구현하는 코드는 매우 까다롭고 어려움
+    - [paper](https://arxiv.org/pdf/1503.03832.pdf)
+    - [개념](https://kangbk0120.github.io/articles/2018-01/face-net)
+    - [triplet-loss](https://omoindrot.github.io/triplet-loss)
+    
+    
+    
 4. Large Margin Softmax Loss (ICML/2016)
     - L-softmax는 Large Margin을 가진 softmax이다. 
     - 큰 마진을 만드는 방법
