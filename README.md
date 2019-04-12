@@ -1,4 +1,13 @@
 # face-recognition
+- 얼굴 인식 기술에 대한 기술 동향
+- Face Verification과 Identification을 아우름
+
+![](images/progress.png)
+ref: Mei Wang and Weihong Deng, "Deep Face Recognition: A Survey," 2018
+
+![](images/pwc_fv.png)
+![](images/pwc_fi.png)
+ref: https://paperswithcode.com/
 
 ## 논문 리뷰
 - [Mei Wang and Weihong Deng, "Deep Face Recognition: A Survey," 2018](papers/Deep_Face_Recognition_A_Survey.md)
