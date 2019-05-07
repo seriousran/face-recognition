@@ -1,9 +1,18 @@
 # face-recognition
-- 얼굴 인식 기술에 대한 기술 동향
-- Face Verification과 Identification을 아우름
+_ Face Verification과 Identification을 모두 아우르는 얼굴 인식 기술에 대한 기술 동향_
 
 ![](images/progress.png)
 > ref: Mei Wang and Weihong Deng, "Deep Face Recognition: A Survey," 2018
+
+## Contents
+- [Survey](mds/survey.md)
+- [논문 리뷰](#논문-리뷰)
+  - [Mei Wang and Weihong Deng, "Deep Face Recognition: A Survey," CoRR, 2018](papers/Deep_Face_Recognition_A_Survey.md)
+- [Pre-trained Model](#pre-trained-model)
+- [Source Code](#code)
+- [Dataset](#dataset)
+- [Links](#links)
+
 
 ## 논문 리뷰
 - [Mei Wang and Weihong Deng, "Deep Face Recognition: A Survey," 2018](papers/Deep_Face_Recognition_A_Survey.md)
@@ -32,7 +41,6 @@ Keras
 ## Links
 - [딥러닝을 이용한 셀럽 얼굴 인식 by kakao](https://mk.kakaocdn.net/dn/if-kakao/conf2018/deep_face_recognition.pdf)
 - 얼굴 인식에 관한 facebook 글(http://fbsight.com/t/topic/148992)
-
 
 ## Face Recognition 서베이
 
