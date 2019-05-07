@@ -1,9 +1,9 @@
 ## Face Recognition 서베이
 
-![](images/pwc_fv.png)
+![](../images/pwc_fv.png)
 > ref: https://paperswithcode.com/
 
-![](images/pwc_fi.png)
+![](../images/pwc_fi.png)
 > ref: https://paperswithcode.com/
 
 2014 CVPR에서 대표적인 두 모델(DeepFace, DeepID)이 소개되면서 딥러닝 기법으로 활발히 연구가 시작된, 얼굴 인식 분야에 대해 최근 5년간의 동향을 다루고자 합니다.
