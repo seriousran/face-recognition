@@ -3,11 +3,7 @@
 - Face Verification과 Identification을 아우름
 
 ![](images/progress.png)
-ref: Mei Wang and Weihong Deng, "Deep Face Recognition: A Survey," 2018
-
-![](images/pwc_fv.png)
-![](images/pwc_fi.png)
-ref: https://paperswithcode.com/
+> ref: Mei Wang and Weihong Deng, "Deep Face Recognition: A Survey," 2018
 
 ## 논문 리뷰
 - [Mei Wang and Weihong Deng, "Deep Face Recognition: A Survey," 2018](papers/Deep_Face_Recognition_A_Survey.md)
@@ -40,7 +36,13 @@ Keras
 
 ## Face Recognition 서베이
 
-2014 CVPR에서 대표적인 두 모델(DeepFace, DeepID)이 소개되면서 시작된 얼굴 인식 분야에 대한 최근 5년간의 동향에 대해서 다루고자 합니다.
+![](images/pwc_fv.png)
+> ref: https://paperswithcode.com/
+
+![](images/pwc_fi.png)
+> ref: https://paperswithcode.com/
+
+2014 CVPR에서 대표적인 두 모델(DeepFace, DeepID)이 소개되면서 딥러닝 기법으로 활발히 연구가 시작된, 얼굴 인식 분야에 대해 최근 5년간의 동향을 다루고자 합니다.
 
 1. DeepFace (CVPR/2014)
     - Training Set: 4.4M 
@@ -74,8 +76,6 @@ Keras
     - [paper](https://arxiv.org/pdf/1503.03832.pdf)
     - [개념](https://kangbk0120.github.io/articles/2018-01/face-net)
     - [triplet-loss](https://omoindrot.github.io/triplet-loss)
-    
-    
     
 4. Large Margin Softmax Loss (ICML/2016)
     - L-softmax는 Large Margin을 가진 softmax이다. 
